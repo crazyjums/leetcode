@@ -53,7 +53,11 @@
 
   <script id="loadcss"></script>
 
-</head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
 
 <body>
   
@@ -317,7 +321,7 @@
   <div class='top'>
     
     
-      <p class="title">CrazyJums LeetCode</p>
+      <p class="title">CrazyJums LeetCode and Pary For Good Job</p>
     
     
   </div>
@@ -348,12 +352,67 @@
         
           
         
+          
+        
+          
+        
+          
+        
+        
+          
         
           
         
       
     
     
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/leetcode/binary-search/">
+        二分搜索
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <h2 id="1-时间复杂度"><a href="#1-时间复杂度" class="headerlink" title="1 时间复杂度"></a>1 时间复杂度</h2><p>二分查找的思想很简单，前提是数组是有序的，查找的时间复杂度是$O(logn)$。利用三个指针，分别指向数组的头部、中间和尾部，如果待查找的元素$target$在数组的前半部分，则跳转到前半部分查找，如果在后半部分，则跳转到后半部分进行查找，当头部的值大于尾部指针的值时，则表示查不到。</p>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+          
+          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/crazyjums'><img src='https://jums.club/leetcode/images/head.jpg'></a>
+        
+        <time>2020-11-10</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/leetcode/categories/%E7%AE%97%E6%B3%95/">算法</a><span class="sep"></span><a class="category-link" href="/leetcode/categories/%E7%AE%97%E6%B3%95/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/">搜索算法</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/leetcode/binary-search/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
       
         
           <div class='post-wrapper'>
@@ -382,7 +441,7 @@ Qu...
       <div>
         
           
-          <a class='avatar' href='/'><img src='https://jums.club/leetcode/images/head.jpg'></a>
+          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/crazyjums'><img src='https://jums.club/leetcode/images/head.jpg'></a>
         
         <time>2020-11-10</time>
         
@@ -484,12 +543,56 @@ Qu...
   
     
     
+  
+
+  <section class="widget category shadow desktop">
+    
+  <header>
+    
+      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <ul class="entry navigation">
+        
+          <li><a class="flat-box"
+            title="/leetcode/categories/%E7%AE%97%E6%B3%95/" href="/leetcode/categories/%E7%AE%97%E6%B3%95/"
+            id="leetcodecategoriesE7AE97E6B395"
+            ><div class='name'>算法</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/leetcode/categories/%E7%AE%97%E6%B3%95/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/" href="/leetcode/categories/%E7%AE%97%E6%B3%95/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/"
+            id="leetcodecategoriesE7AE97E6B395E6909CE7B4A2E7AE97E6B395"
+            ><div class='name'>搜索算法</div><div class='badge'>(1)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
 
   
 
   
     
     
+  
+
+  <section class="widget tagcloud shadow desktop mobile">
+    
+  <header>
+    
+      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <a href="/leetcode/tags/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/" style="font-size: 14px; color: #999">搜索算法</a> <a href="/leetcode/tags/%E7%AE%97%E6%B3%95/" style="font-size: 14px; color: #999">算法</a>
+    </div>
+  </section>
+
 
   
 
@@ -566,7 +669,7 @@ Qu...
     
       
         <div class='copyright'>
-        <p><a href="/">Copyright © 2017-2020 XXX</a></p>
+        <p><a href="/">Copyright © 2017-2020 CrazyJums</a></p>
 
         </div>
       
@@ -835,7 +938,7 @@ var loadCSS = function( href, before, media, attributes ){
       lang: 'zh-cn',
       visitor: 'true',
       highlight: 'true',
-      mathJax: 'false',
+      mathJax: 'true',
       enableQQ: 'true',
       recordIP: 'false',
       requiredFields: requiredFields,
@@ -866,7 +969,7 @@ const ROOT =  ("/leetcode/" || "/").endsWith('/') ? ("/leetcode/" || "/") : ("/l
 
 $('.input.u-search-input').one('focus',function(){
 	
-		loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.1.6/source/js/search/hexo.min.js',setSearchService);
+		loadScript('https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2.6.4/js/search.js',setSearchService);
 	
 })
 
@@ -1319,5 +1422,4 @@ document.addEventListener("pjax:success", listennSidebarTOC);
 
     
   </div>
-</body>
-</html>
+<script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>

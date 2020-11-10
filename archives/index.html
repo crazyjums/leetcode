@@ -51,7 +51,11 @@
 
   <script id="loadcss"></script>
 
-</head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
 
 <body>
   
@@ -315,7 +319,7 @@
   <div class='top'>
     
     
-      <p class="title">CrazyJums LeetCode</p>
+      <p class="title">CrazyJums LeetCode and Pary For Good Job</p>
     
     
   </div>
@@ -348,6 +352,22 @@
 					
 						
 						<h2>2020</h2>
+					
+						<div class='timenode'>
+								<a class="meta" href="/leetcode/binary-search/">
+									<time>11-10</time>
+									
+										二分搜索
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
 					
 						<div class='timenode'>
 								<a class="meta" href="/leetcode/hello-world/">
@@ -439,12 +459,56 @@
   
     
     
+  
+
+  <section class="widget category shadow desktop">
+    
+  <header>
+    
+      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <ul class="entry navigation">
+        
+          <li><a class="flat-box"
+            title="/leetcode/categories/%E7%AE%97%E6%B3%95/" href="/leetcode/categories/%E7%AE%97%E6%B3%95/"
+            id="leetcodecategoriesE7AE97E6B395"
+            ><div class='name'>算法</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/leetcode/categories/%E7%AE%97%E6%B3%95/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/" href="/leetcode/categories/%E7%AE%97%E6%B3%95/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/"
+            id="leetcodecategoriesE7AE97E6B395E6909CE7B4A2E7AE97E6B395"
+            ><div class='name'>搜索算法</div><div class='badge'>(1)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
 
   
 
   
     
     
+  
+
+  <section class="widget tagcloud shadow desktop mobile">
+    
+  <header>
+    
+      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <a href="/leetcode/tags/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/" style="font-size: 14px; color: #999">搜索算法</a> <a href="/leetcode/tags/%E7%AE%97%E6%B3%95/" style="font-size: 14px; color: #999">算法</a>
+    </div>
+  </section>
+
 
   
 
@@ -520,7 +584,7 @@
     
       
         <div class='copyright'>
-        <p><a href="/">Copyright © 2017-2020 XXX</a></p>
+        <p><a href="/">Copyright © 2017-2020 CrazyJums</a></p>
 
         </div>
       
@@ -789,7 +853,7 @@ var loadCSS = function( href, before, media, attributes ){
       lang: 'zh-cn',
       visitor: 'true',
       highlight: 'true',
-      mathJax: 'false',
+      mathJax: 'true',
       enableQQ: 'true',
       recordIP: 'false',
       requiredFields: requiredFields,
@@ -820,7 +884,7 @@ const ROOT =  ("/leetcode/" || "/").endsWith('/') ? ("/leetcode/" || "/") : ("/l
 
 $('.input.u-search-input').one('focus',function(){
 	
-		loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.1.6/source/js/search/hexo.min.js',setSearchService);
+		loadScript('https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2.6.4/js/search.js',setSearchService);
 	
 })
 
@@ -1273,5 +1337,4 @@ document.addEventListener("pjax:success", listennSidebarTOC);
 
     
   </div>
-</body>
-</html>
+<script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
