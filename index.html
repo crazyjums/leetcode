@@ -30,6 +30,8 @@
 
   <!-- feed -->
   
+    <link rel="alternate" href="/leetcode/atom.xml" title="Crazyjums Leetcode" type="application/atom+xml">
+  
 
   <!-- import meta -->
   
@@ -53,11 +55,7 @@
 
   <script id="loadcss"></script>
 
-<!-- hexo injector head_end start -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --></head>
+</head>
 
 <body>
   
@@ -79,9 +77,11 @@
         
         <a class="title flat-box" target="_self" href='/leetcode/'>
           
-            <img no-lazy class='logo' src='https://jums.club/leetcode/images/head.jpg'/>
+          
+            <i class='https://jums.club/leetcode/images/head.jpg'></i>
           
           
+            code
           
         </a>
       
@@ -313,7 +313,7 @@
     <div id="l_cover">
   
     
-        <div id="full" class='cover-wrapper  dock' style="display: ;">
+        <div id="full" class='cover-wrapper  search' style="display: ;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://jums.club/leetcode/images/topic.jpg"></div>
           
@@ -326,6 +326,14 @@
     
   </div>
   <div class='bottom'>
+    
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <input type="text" class="input u-search-input" placeholder="Say Hi To the World" />
+          <i class="icon fas fa-search fa-fw"></i>
+        </form>
+      </div>
+    
     <div class='menu navigation'>
       <div class='list-h'>
         
@@ -334,42 +342,42 @@
               
               
               id="https:jumsclub">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f0cf.svg'><p>主站</p>
+              <p>主站</p>
             </a>
           
             <a href="/leetcode/archives/"
               
               
               id="leetcodearchives">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4f0.svg'><p>归档</p>
+              <p>归档</p>
             </a>
           
             <a href="https://jums.club/kbooks"
               
               
               id="https:jumsclubkbooks">
-              <img src='https://jums.club/kbooks/images/favicon.jpg'><p>看书</p>
+              <p>看书</p>
             </a>
           
             <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_33521184"
               
               
               id="https:blogcsdnnetqq_33521184">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f1e9.svg'><p>CSDN</p>
+              <p>CSDN</p>
             </a>
           
             <a href="https://jums.club/leetcode/categories/%E7%AE%97%E6%B3%95/"
               
               
               id="https:jumsclubleetcodecategoriesE7AE97E6B395">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f389.svg'><p>算法</p>
+              <p>算法</p>
             </a>
           
             <a target="_blank" rel="noopener" href="https://github.com/crazyjums"
               
               
               id="https:githubcomcrazyjums">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f9ec.svg'><p>GitHub</p>
+              <p>GitHub</p>
             </a>
           
         
@@ -414,6 +422,12 @@
             <div class="post post-v3 white-box reveal shadow">
   
   
+  
+    <div class='headimg-div'>
+      <a class='headimg-a' href="/leetcode/binary-search/">
+        <img class='headimg' src='https://picup.heson10.com/img/upyun/2020/10/heandimgbb.png'/>
+      </a>
+    </div>
   
   
     
@@ -520,7 +534,7 @@
           
         
           
-            <a href="/leetcode/"
+            <a href="https://music.163.com/#/user/home?id=55006914"
               class="social fas fa-headphones-alt flat-btn"
               target="_blank"
               rel="external nofollow noopener noreferrer">
@@ -1218,6 +1232,8 @@ function listenSearch(){
 function setSearchService() {
 	listenSearch();
 	
+		document.addEventListener("pjax:success", listenSearch);
+	
 }
 </script>
 
@@ -1657,4 +1673,5 @@ document.addEventListener("pjax:success", listennSidebarTOC);
 
     
   </div>
-<script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
+</body>
+</html>
