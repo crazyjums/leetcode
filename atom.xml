@@ -6,7 +6,7 @@
   <link href="http://jums.club/atom.xml" rel="self"/>
   
   <link href="http://jums.club/"/>
-  <updated>2020-11-12T01:55:54.820Z</updated>
+  <updated>2020-11-12T03:09:33.420Z</updated>
   <id>http://jums.club/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>打家劫舍</title>
+    <link href="http://jums.club/house-robber/"/>
+    <id>http://jums.club/house-robber/</id>
+    <published>2020-11-12T02:33:54.000Z</published>
+    <updated>2020-11-12T03:09:33.420Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\leetcode\assets\css\APlayer.min.css"><script src="\leetcode\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="tag link"><a class="link-card" title="198. 打家劫舍" href="https://leetcode-cn.com/problems/house-robber/"><div class="left"><img src="https://jums.club/leetcode/images/safari.png" class="lazyload" data-srcset="https://jums.club/leetcode/images/safari.png" srcset="data:image/png;base64,666"/></div><div class="right"><p class="text">198. 打家劫舍</p><p class="url">https://leetcode-cn.com/problems/house-robber/</p></div></a></div><a id="more"></a><blockquote><p>你是一个专业的小偷，计划偷窃沿街的房屋。每间房内都藏有一定的现金，影响你偷窃的唯一制约因素就是相邻的房屋装有相互连通的防盗系统，如果两间相邻的房屋在同一晚上被小偷闯入，系统会自动报警。</p><p>给定一个代表每个房屋存放金额的非负整数数组，计算你 不触动警报装置的情况下 ，一夜之内能够偷窃到的最高金额。</p><p>示例 1：</p><p>输入：[1,2,3,1]<br>输出：4<br>解释：偷窃 1 号房屋 (金额 = 1) ，然后偷窃 3 号房屋 (金额 = 3)。<br>     偷窃到的最高金额 = 1 + 3 = 4 。<br>示例 2：</p><p>输入：[2,7,9,3,1]<br>输出：12<br>解释：偷窃 1 号房屋 (金额 = 2), 偷窃 3 号房屋 (金额 = 9)，接着偷窃 5 号房屋 (金额 = 1)。<br>     偷窃到的最高金额 = 2 + 9 + 1 = 12 。</p><p>提示：</p><p>0 &lt;= nums.length &lt;= 100<br>0 &lt;= nums[i] &lt;= 400</p><p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/house-robber">https://leetcode-cn.com/problems/house-robber</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p></blockquote><h2 id="1-解题思路"><a href="#1-解题思路" class="headerlink" title="1 解题思路"></a>1 解题思路</h2><p>劫匪遇到一间屋子，有两种选择，一是打劫，二是不打劫。如果打劫，则需要第$i-1$个屋子没有被打劫，也就是说，第$i-1$个屋子不能被算到总的金额中。如果不打劫，则打劫到当前屋子的最高金额就是打劫到第$i-1$个屋子所能获得的最高金额。</p><p>定义一个$dp$数组，$dp[i]$表示到第$i$个屋子为止，劫匪所能获得的最大金额，则：</p><p>$dp[i]=max(dp[i-1],dp[i-2]+nums[i])$</p><ul><li>$dp[i-1]$，表示不打劫第$i$个屋子所能获得的最大金额</li><li>$dp[i-2]+nums[i]$，表示打劫第$i$个屋子所能获得的最大金额</li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">rob</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (nums.length == <span class="number">1</span>) <span class="keyword">return</span> nums[<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[nums.length];</span><br><span class="line">        dp[<span class="number">0</span>] = nums[<span class="number">0</span>];</span><br><span class="line">        dp[<span class="number">1</span>] = Math.max(nums[<span class="number">0</span>], nums[<span class="number">1</span>]);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; nums.length; i ++) &#123;</span><br><span class="line">            dp[i] = Math.max(</span><br><span class="line">                            dp[i - <span class="number">1</span>], <span class="comment">//不打劫第i个房子</span></span><br><span class="line">                            dp[i - <span class="number">2</span>] + nums[i] <span class="comment">//打劫第i个房子</span></span><br><span class="line">                            );</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[nums.length - <span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;div class=&quot;tag link&quot;&gt;&lt;a class=&quot;link-card&quot; title=&quot;198. 打家劫舍&quot; href=&quot;https://leetcode-cn.com/problems/house-robber/&quot;&gt;&lt;div class=&quot;left&quot;&gt;&lt;img src=&quot;https://jums.club/leetcode/images/safari.png&quot;/&gt;&lt;/div&gt;&lt;div class=&quot;right&quot;&gt;&lt;p class=&quot;text&quot;&gt;198. 打家劫舍&lt;/p&gt;&lt;p class=&quot;url&quot;&gt;https://leetcode-cn.com/problems/house-robber/&lt;/p&gt;&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;</summary>
+    
+    
+    
+    <category term="LeetCode刷题" scheme="http://jums.club/categories/LeetCode%E5%88%B7%E9%A2%98/"/>
+    
+    <category term="简答题目" scheme="http://jums.club/categories/LeetCode%E5%88%B7%E9%A2%98/%E7%AE%80%E7%AD%94%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="LeetCode刷题" scheme="http://jums.club/tags/LeetCode%E5%88%B7%E9%A2%98/"/>
+    
+    <category term="简答题目" scheme="http://jums.club/tags/%E7%AE%80%E7%AD%94%E9%A2%98%E7%9B%AE/"/>
+    
+    <category term="动态规划" scheme="http://jums.club/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
     <title>922. 按奇偶排序数组 II</title>
     <link href="http://jums.club/sort-array-by-parity-ii/"/>
     <id>http://jums.club/sort-array-by-parity-ii/</id>
     <published>2020-11-12T01:52:16.000Z</published>
-    <updated>2020-11-12T01:55:54.820Z</updated>
+    <updated>2020-11-12T01:56:01.986Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\leetcode\assets\css\APlayer.min.css"><script src="\leetcode\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="tag link"><a class="link-card" title="922. 按奇偶排序数组 II，https://leetcode-cn.com/problems/sort-array-by-parity-ii/" href="https://jums.club/leetcode/images/safari.png"><div class="left"><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/256/safari.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/256/safari.png" srcset="data:image/png;base64,666"/></div><div class="right"><p class="text">922. 按奇偶排序数组 II，https://leetcode-cn.com/problems/sort-array-by-parity-ii/</p><p class="url">https://jums.club/leetcode/images/safari.png</p></div></a></div><a id="more"></a><blockquote><p>给定一个非负整数数组 A， A 中一半整数是奇数，一半整数是偶数。</p><p>对数组进行排序，以便当 A[i] 为奇数时，i 也是奇数；当 A[i] 为偶数时， i 也是偶数。</p><p>你可以返回任何满足上述条件的数组作为答案。</p><p>示例：</p><p>输入：[4,2,5,7]<br>输出：[4,5,2,7]<br>解释：[4,7,2,5]，[2,5,4,7]，[2,7,4,5] 也会被接受。</p><p>提示：</p><p>2 &lt;= A.length &lt;= 20000<br>A.length % 2 == 0<br>0 &lt;= A[i] &lt;= 1000</p><p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/sort-array-by-parity-ii">https://leetcode-cn.com/problems/sort-array-by-parity-ii</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p></blockquote><h2 id="1-解题思路"><a href="#1-解题思路" class="headerlink" title="1 解题思路"></a>1 解题思路</h2><p>使用两次遍历，一次确定偶数的位置，一次确定奇数的位置。</p><p>时间复杂度是$O(n)$，空间复杂度是$O(1)$。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] sortArrayByParityII(<span class="keyword">int</span>[] A) &#123;</span><br><span class="line">        <span class="keyword">int</span> odd = <span class="number">1</span>, even = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span>[] res = <span class="keyword">new</span> <span class="keyword">int</span>[A.length];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> a : A) &#123;</span><br><span class="line">            <span class="keyword">if</span> ((a &amp; <span class="number">1</span>) == <span class="number">0</span>) &#123;</span><br><span class="line">                res[even] = a;</span><br><span class="line">                even += <span class="number">2</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> a : A) &#123;</span><br><span class="line">            <span class="keyword">if</span> ((a &amp; <span class="number">1</span>) == <span class="number">1</span>) &#123;</span><br><span class="line">                res[odd] = a;</span><br><span class="line">                odd += <span class="number">2</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -63,9 +90,9 @@
     <category term="中等难度" scheme="http://jums.club/categories/LeetCode%E5%88%B7%E9%A2%98/%E4%B8%AD%E7%AD%89%E9%9A%BE%E5%BA%A6/"/>
     
     
-    <category term="排序算法" scheme="http://jums.club/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
-    
     <category term="LeetCode刷题" scheme="http://jums.club/tags/LeetCode%E5%88%B7%E9%A2%98/"/>
+    
+    <category term="排序算法" scheme="http://jums.club/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
     
     <category term="中等难度" scheme="http://jums.club/tags/%E4%B8%AD%E7%AD%89%E9%9A%BE%E5%BA%A6/"/>
     

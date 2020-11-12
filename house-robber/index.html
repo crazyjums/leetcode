@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -21,9 +19,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>Archive - Crazyjums Leetcode</title>
+  <title>打家劫舍 - Crazyjums Leetcode</title>
+  
+    <meta name="keywords" content="LeetCode刷题,简答题目,动态规划">
   
 
+  
+    <meta name="description" content="198. 打家劫舍https://leetcode-cn.com/problems/house-robber/">
   
 
   <!-- feed -->
@@ -309,7 +311,7 @@
     <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper  dock' style="display: ;">
+        <div id="half" class='cover-wrapper post dock' style="display: ;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://jums.club/leetcode/images/topic.jpg"></div>
           
@@ -385,79 +387,338 @@
         
 
 <div class='l_main'>
-	
-	  <article id="arc" class="post article white-box reveal shadow">
-			
-			
-				
-				
-					
-						
-						<h2>2020</h2>
-					
-						<div class='timenode'>
-								<a class="meta" href="/leetcode/house-robber/">
-									<time>11-12</time>
-									
-										打家劫舍
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/leetcode/sort-array-by-parity-ii/">
-									<time>11-12</time>
-									
-										922. 按奇偶排序数组 II
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/leetcode/next-permutation/">
-									<time>11-10</time>
-									
-										下一个全排列
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/leetcode/binary-search/">
-									<time>11-10</time>
-									
-										二分搜索
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-	  </article>
-	
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+    <div class='headimg-div'>
+      <a class='headimg-a'>
+        <img class='headimg' src='https://jums.club/leetcode/images/leetcode1.png'/>
+      </a>
+    </div>
+  
+  <div class="article-meta" id="top">
+    
+      
+
+
+    
+    
+    
+      <h1 class="title">
+        打家劫舍
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' target="_blank" href="https://github.com/crazyjums" rel="nofollow noopener">
+    <img no-lazy src="https://jums.club/leetcode/images/head.jpg">
+    <p>crazyjums</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/leetcode/categories/LeetCode%E5%88%B7%E9%A2%98/">LeetCode刷题</a><span class="sep"></span><a class="category-link" href="/leetcode/categories/LeetCode%E5%88%B7%E9%A2%98/%E7%AE%80%E7%AD%94%E9%A2%98%E7%9B%AE/">简答题目</a>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Nov 12, 2020</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse busuanzi">
+    <a class='notlink'>
+      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+      <p>
+        <span id="busuanzi_value_page_pv">
+          <i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i>
+        </span>
+        次浏览
+      </p>
+    </a>
+  </div>
+
+
+          
+        
+      </div>
+    
+  </div>
+
+
+  
+  <div class="tag link"><a class="link-card" title="198. 打家劫舍" target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/house-robber/"><div class="left"><img src="https://jums.club/leetcode/images/safari.png" class="lazyload" data-srcset="https://jums.club/leetcode/images/safari.png" srcset="data:image/png;base64,666"/></div><div class="right"><p class="text">198. 打家劫舍</p><p class="url">https://leetcode-cn.com/problems/house-robber/</p></div></a></div>
+
+<a id="more"></a>
+
+<blockquote>
+<p>你是一个专业的小偷，计划偷窃沿街的房屋。每间房内都藏有一定的现金，影响你偷窃的唯一制约因素就是相邻的房屋装有相互连通的防盗系统，如果两间相邻的房屋在同一晚上被小偷闯入，系统会自动报警。</p>
+<p>给定一个代表每个房屋存放金额的非负整数数组，计算你 不触动警报装置的情况下 ，一夜之内能够偷窃到的最高金额。</p>
+<p>示例 1：</p>
+<p>输入：[1,2,3,1]<br>输出：4<br>解释：偷窃 1 号房屋 (金额 = 1) ，然后偷窃 3 号房屋 (金额 = 3)。<br>     偷窃到的最高金额 = 1 + 3 = 4 。<br>示例 2：</p>
+<p>输入：[2,7,9,3,1]<br>输出：12<br>解释：偷窃 1 号房屋 (金额 = 2), 偷窃 3 号房屋 (金额 = 9)，接着偷窃 5 号房屋 (金额 = 1)。<br>     偷窃到的最高金额 = 2 + 9 + 1 = 12 。</p>
+<p>提示：</p>
+<p>0 &lt;= nums.length &lt;= 100<br>0 &lt;= nums[i] &lt;= 400</p>
+<p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/house-robber">https://leetcode-cn.com/problems/house-robber</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+</blockquote>
+<h2 id="1-解题思路"><a href="#1-解题思路" class="headerlink" title="1 解题思路"></a>1 解题思路</h2><p>劫匪遇到一间屋子，有两种选择，一是打劫，二是不打劫。如果打劫，则需要第$i-1$个屋子没有被打劫，也就是说，第$i-1$个屋子不能被算到总的金额中。如果不打劫，则打劫到当前屋子的最高金额就是打劫到第$i-1$个屋子所能获得的最高金额。</p>
+<p>定义一个$dp$数组，$dp[i]$表示到第$i$个屋子为止，劫匪所能获得的最大金额，则：</p>
+<p>$dp[i]=max(dp[i-1],dp[i-2]+nums[i])$</p>
+<ul>
+<li>$dp[i-1]$，表示不打劫第$i$个屋子所能获得的最大金额</li>
+<li>$dp[i-2]+nums[i]$，表示打劫第$i$个屋子所能获得的最大金额</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">rob</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (nums.length == <span class="number">1</span>) <span class="keyword">return</span> nums[<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[nums.length];</span><br><span class="line">        dp[<span class="number">0</span>] = nums[<span class="number">0</span>];</span><br><span class="line">        dp[<span class="number">1</span>] = Math.max(nums[<span class="number">0</span>], nums[<span class="number">1</span>]);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; nums.length; i ++) &#123;</span><br><span class="line">            dp[i] = Math.max(</span><br><span class="line">                            dp[i - <span class="number">1</span>], <span class="comment">//不打劫第i个房子</span></span><br><span class="line">                            dp[i - <span class="number">2</span>] + nums[i] <span class="comment">//打劫第i个房子</span></span><br><span class="line">                            );</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[nums.length - <span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+  
+  
+    
+    <div class='footer'>
+      
+      
+        
+  <div class="related_posts">
+    <section class='header'>
+      <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
+    </section>
+    <section class='body'>
+      <div class="vlts-rps"><a class="item" href="\leetcode\next-permutation\" title="下一个全排列" rel="bookmark "><img src="https://jums.club/leetcode/images/safari.png" class="lazyload" data-srcset="https://jums.club/leetcode/images/safari.png" srcset="data:image/png;base64,666" /><span class="title">下一个全排列</span></a><a class="item" href="\leetcode\sort-array-by-parity-ii\" title="922. 按奇偶排序数组 II" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/256/safari.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/256/safari.png" srcset="data:image/png;base64,666" /><span class="title">922. 按奇偶排序数组 II</span><span class="excerpt">922. 按奇偶排序数组 II，https://leetcode-cn.com/problems/sort-array-b...</span></a></div></section></div>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://jums.club/house-robber/>http://jums.club/house-robber/</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+        <div class='donate'>
+          <div class='imgs'>
+            
+              <img src='https://jums.club/images/wechatpay.jpg'>
+            
+              <img src='https://jums.club/images/alipay.jpg'>
+            
+          </div>
+        </div>
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-11-12T11:09:33+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Nov 12, 2020</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/leetcode/tags/LeetCode%E5%88%B7%E9%A2%98/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>LeetCode刷题</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/leetcode/tags/%E7%AE%80%E7%AD%94%E9%A2%98%E7%9B%AE/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>简答题目</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/leetcode/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>动态规划</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://jums.club/house-robber/&title=打家劫舍 - Crazyjums Leetcode&summary=198. 打家劫舍https://leetcode-cn.com/problems/house-robber/"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://jums.club/house-robber/&title=打家劫舍 - Crazyjums Leetcode&summary=198. 打家劫舍https://leetcode-cn.com/problems/house-robber/"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://jums.club/house-robber/&title=打家劫舍 - Crazyjums Leetcode&summary=198. 打家劫舍https://leetcode-cn.com/problems/house-robber/"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" srcset="data:image/png;base64,666"></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAD4CAAAAADkunTXAAACRklEQVR42u3dSw6DMAwFQO5/6fYEVeIPBcxkVylAxqsnO1KPz0vXAQ4ODg4OPgh+JNfPFwef696/eg84ODg4OPhE+HYA2IRX3/NrX/W84ODg4ODgk+HLALDY312o6PeX+8HBwcHBwcGPbBDJFggcHBwcHBz8fwGmC/i45AYODg4ODn4h/PQAsdjXFZjAwcHBwcHfBE9fmLvo9+U3G8HBwcHBwW8Ar67dD+42JHafT58XHBwcHBx8EDwbELoKEr0wUD0fODg4ODj4JHh2IB8dKESfzzYatgcK4ODg4ODgg+DVYBItYPU9bR0YcHBwcHDwB8O7LgTsFrAcQKoDC3BwcHBw8MHwaICpXiCoFjJcEHBwcHBw8EHwaAA4a6CQHfyHf4ODg4ODgw+C7waJ7EAhO2jINiLCyQ0cHBwcHPzB8O6DZgtYvTgQHiiAg4ODg4O/AN7deMg2EKpgcHBwcHDwifBoAz97gOpAoW3gAA4ODg4OPhAebRR8gqsr+GQbFuDg4ODg4G+AVy/SRQuWLWw6WIGDg4ODg78A3hVEuhsS5e+Dg4ODg4MPgldXtIFw1gWB7cKAg4ODg4MPgh/JVW0o7L6v2gBZNiLAwcHBwcEHwKuBIzvQP2tfeKAADg4ODg4+AB4dCHRdBNwNMqdPUsDBwcHBwcHDf7zeNagABwcHBwcHj8N3A0l1kBENMKc3IsDBwcHBwW8ErzYMqgGmGpD+NkkBBwcHBwe/EbwaGMoD+1XwSJ4PHBwcHBx8MvxtCxwcHBwcfMD6ArtoAz18qHwgAAAAAElFTkSuQmCC">
+          </div>
+        </div>
+      
+    
+      
+        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
+          
+            target="_blank" href="https://t.me/share/url?url=http://jums.club/house-robber/&text=打家劫舍 - Crazyjums Leetcode"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/leetcode/sort-array-by-parity-ii/'>
+          <p class='title'>922. 按奇偶排序数组 II<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>922. 按奇偶排序数组 II，https://leetcode-cn.com/problems/sort-array-by-parity-ii/https://jums.club/leetco...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+  <script>
+  // https://github.com/theme-next/hexo-theme-next/blob/master/layout/_third-party/math/mathjax.swig
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.0/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    // 文章章节标题不能为 “MathJax” ，否则会报错。
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -465,151 +726,28 @@
     
     
 
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/leetcode/about/'>
-          <img no-lazy src='https://jums.club/leetcode/images/head.jpg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">Crazyjums Leetcode</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/leetcode/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:me@xxx.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/crazyjums/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://music.163.com/#/user/home?id=55006914"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
 
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop">
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/leetcode/categories/LeetCode%E5%88%B7%E9%A2%98/" href="/leetcode/categories/LeetCode%E5%88%B7%E9%A2%98/"
-            id="leetcodecategoriesLeetCodeE588B7E9A298"
-            ><div class='name'>LeetCode刷题</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/leetcode/categories/LeetCode%E5%88%B7%E9%A2%98/%E4%B8%AD%E7%AD%89%E9%9A%BE%E5%BA%A6/" href="/leetcode/categories/LeetCode%E5%88%B7%E9%A2%98/%E4%B8%AD%E7%AD%89%E9%9A%BE%E5%BA%A6/"
-            id="leetcodecategoriesLeetCodeE588B7E9A298E4B8ADE7AD89E99ABEE5BAA6"
-            ><div class='name'>中等难度</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/leetcode/categories/LeetCode%E5%88%B7%E9%A2%98/%E7%AE%80%E5%8D%95%E9%A2%98%E7%9B%AE/" href="/leetcode/categories/LeetCode%E5%88%B7%E9%A2%98/%E7%AE%80%E5%8D%95%E9%A2%98%E7%9B%AE/"
-            id="leetcodecategoriesLeetCodeE588B7E9A298E7AE80E58D95E9A298E79BAE"
-            ><div class='name'>简单题目</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/leetcode/categories/LeetCode%E5%88%B7%E9%A2%98/%E7%AE%80%E7%AD%94%E9%A2%98%E7%9B%AE/" href="/leetcode/categories/LeetCode%E5%88%B7%E9%A2%98/%E7%AE%80%E7%AD%94%E9%A2%98%E7%9B%AE/"
-            id="leetcodecategoriesLeetCodeE588B7E9A298E7AE80E7AD94E9A298E79BAE"
-            ><div class='name'>简答题目</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/leetcode/categories/%E7%AE%97%E6%B3%95/" href="/leetcode/categories/%E7%AE%97%E6%B3%95/"
-            id="leetcodecategoriesE7AE97E6B395"
-            ><div class='name'>算法</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/leetcode/categories/%E7%AE%97%E6%B3%95/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/" href="/leetcode/categories/%E7%AE%97%E6%B3%95/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/"
-            id="leetcodecategoriesE7AE97E6B395E6909CE7B4A2E7AE97E6B395"
-            ><div class='name'>搜索算法</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF"><span class="toc-text">1 解题思路</span></a></li></ol>
     </div>
   </section>
 
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/leetcode/tags/LeetCode%E5%88%B7%E9%A2%98/" style="font-size: 24px; color: #555">LeetCode刷题</a> <a href="/leetcode/tags/%E4%B8%AD%E7%AD%89%E9%9A%BE%E5%BA%A6/" style="font-size: 14px; color: #999">中等难度</a> <a href="/leetcode/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" style="font-size: 14px; color: #999">动态规划</a> <a href="/leetcode/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" style="font-size: 14px; color: #999">排序算法</a> <a href="/leetcode/tags/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/" style="font-size: 14px; color: #999">搜索算法</a> <a href="/leetcode/tags/%E7%AE%80%E5%8D%95%E9%A2%98%E7%9B%AE/" style="font-size: 14px; color: #999">简单题目</a> <a href="/leetcode/tags/%E7%AE%80%E7%AD%94%E9%A2%98%E7%9B%AE/" style="font-size: 14px; color: #999">简答题目</a> <a href="/leetcode/tags/%E7%AE%97%E6%B3%95/" style="font-size: 14px; color: #999">算法</a>
-    </div>
-  </section>
-
-
-  
 
   
 
 
 </aside>
+
 
 
         
@@ -619,8 +757,8 @@
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="打家劫舍";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 
