@@ -481,7 +481,7 @@
 <p>输入：s = “aab” p = “c<em>a</em>b”<br>输出：true<br>解释：因为 ‘*’ 表示零个或多个，这里 ‘c’ 为 0 个, ‘a’ 被重复一次。因此可以匹配字符串 “aab”。<br>示例 5：</p>
 <p>输入：s = “mississippi” p = “mis<em>is</em>p*.”<br>输出：false</p>
 <p>提示：</p>
-<p>$0 &lt;= s.length &lt;= 20$<br>$0 &lt;= p.length &lt;= 30$<br>s 可能为空，且只包含从 a-z 的小写字母。<br>p 可能为空，且只包含从 a-z 的小写字母，以及字符 . 和 *。<br>保证每次出现字符 * 时，前面都匹配到有效的字符</p>
+<p>$0 &lt;= s.length &lt;= 20$<br>$0 &lt;= p.length &lt;= 30$<br>s 可能为空，且只包含从 a-z 的小写字母。<br>p 可能为空，且只包含从 a-z 的小写字母，以及字符 . 和 *。<br>保证每次出现字符 * 时，前面都匹配到有效的字符       </p>
 <p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/regular-expression-matching">https://leetcode-cn.com/problems/regular-expression-matching</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
 </blockquote>
 <h2 id="1-解题思路"><a href="#1-解题思路" class="headerlink" title="1 解题思路"></a>1 解题思路</h2><p>本题可以使用动态规划来进行求解，定义$dp$数组，$dp[i][j]$表示字符串$s$的前$i$个字符和字符串$p$的前$j$的字符是否匹配。默认$dp[0][0]=true$，且$dp[m+1][n+1]$。</p>
@@ -495,7 +495,9 @@
 <p>$s[i-1]==p[j-2]$或者$p[j-2]==’.’$，表示前一个字符可以匹配，则表示$*$号之前的字符出现了一个，则$dp[i][j]=dp[i][j-1]$。</p>
 </li>
 <li><p>子情况2：</p>
-<p>$s[i-1]!=p[j-2]$时，此时$<em>$可以匹配0个、1个或者多个$</em>$号之前的字符，则$dp[i][j]=dp[i-1][j]ordp[i][j-1]ordp[i][j-2]$。其中$dp[i][j-2]$表示匹配0个字符，$dp[i][j-1]$表示匹配1个字符，$dp[i-1][j]$表示匹配多个字符。</p>
+<p>$s[i-1]!=p[j-2]$时，此时$<em>$可以匹配0个、1个或者多个$</em>$号之前的字符，则</p>
+<p>$dp[i][j]=dp[i-1][j]ordp[i][j-1]ordp[i][j-2]$。</p>
+<p>其中$dp[i][j-2]$表示匹配0个字符，$dp[i][j-1]$表示匹配1个字符，$dp[i-1][j]$表示匹配多个字符。</p>
 </li>
 </ul>
 </li>
@@ -554,7 +556,7 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-11-12T20:49:14+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-11-12T20:51:32+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：Nov 12, 2020</p>
