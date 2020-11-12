@@ -5,6 +5,8 @@
   <!-- SEO相关 -->
   
     
+      <meta name="robots" content="noindex,follow">
+    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -19,13 +21,9 @@
 
   <!-- 页面元数据 -->
   
-  <title>二分搜索 - Crazyjums Leetcode</title>
-  
-    <meta name="keywords" content="算法,搜索算法">
+  <title>Tag: simple - Crazyjums Leetcode</title>
   
 
-  
-    <meta name="description" content="1 时间复杂度二分查找的思想很简单，前提是数组是有序的，查找的时间复杂度是$O(logn)$。利用三个指针，分别指向数组的头部、中间和尾部，如果待查找的元素$target$在数组的前半部分，则跳转到前半部分查找，如果在后半部分，则跳转到后半部分进行查找，当头部的值大于尾部指针的值时，则表示查不到。">
   
 
   <!-- feed -->
@@ -311,7 +309,7 @@
     <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper post dock' style="display: ;">
+        <div id="half" class='cover-wrapper  dock' style="display: ;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://jums.club/leetcode/images/topic.jpg"></div>
           
@@ -386,322 +384,138 @@
       <div class='body-wrapper' id="pjax-container">
         
 
+
 <div class='l_main'>
-  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   
-
-
+    
+      
+  <section class="post-list">
+    
+      
+        
+          
+        
+          
+        
+      
+    
+    
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
   
     <div class='headimg-div'>
-      <a class='headimg-a'>
-        <img class='headimg' src='https://jums.club/leetcode/images/v2-6d974e564577fd69733ca08c47db8b5b_720w.jpg'/>
+      <a class='headimg-a' href="/leetcode/house-robber/">
+        <img class='headimg' src='https://jums.club/leetcode/images/leetcode1.png'/>
       </a>
     </div>
   
-  <div class="article-meta" id="top">
+  
     
-      
-
-
+    <h2 class="article-title" >
+      <a href="/leetcode/house-robber/">
+        打家劫舍
+      </a>
+    </h2>
+  
+  <div class='md'>
     
+      <div class="tag link"><a class="link-card" title="198. 打家劫舍" target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/house-robber/"><div class="left"><img src="https://jums.club/leetcode/images/safari.png" class="lazyload" data-srcset="https://jums.club/leetcode/images/safari.png" srcset="data:image/png;base64,666"/></div><div class="right"><p class="text">198. 打家劫舍</p><p class="url">https://leetcode-cn.com/problems/house-robber/</p></div></a></div>
     
-    
-      <h1 class="title">
-        二分搜索
-      </h1>
-      <div class='new-meta-box'>
-        
-          
-            
-<div class='new-meta-item author'>
-  <a class='author' target="_blank" href="https://github.com/crazyjums" rel="nofollow noopener">
-    <img no-lazy src="https://jums.club/leetcode/images/head.jpg">
-    <p>crazyjums</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/leetcode/categories/%E7%AE%97%E6%B3%95/">算法</a><span class="sep"></span><a class="category-link" href="/leetcode/categories/%E7%AE%97%E6%B3%95/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/">搜索算法</a>
-    </a>
   </div>
-
-
-          
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
         
           
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Nov 10, 2020</p>
-  </a>
-</div>
-
-          
+          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/crazyjums'><img src='https://jums.club/leetcode/images/head.jpg'></a>
         
-          
-            
-  <div class="new-meta-item browse busuanzi">
-    <a class='notlink'>
-      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
-      <p>
-        <span id="busuanzi_value_page_pv">
-          <i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i>
-        </span>
-        次浏览
-      </p>
-    </a>
-  </div>
-
-
-          
+        <time>2020-11-12</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/leetcode/categories/LeetCode%E5%88%B7%E9%A2%98/">LeetCode刷题</a><span class="sep"></span><a class="category-link" href="/leetcode/categories/LeetCode%E5%88%B7%E9%A2%98/simple/">simple</a>
         
       </div>
-    
-  </div>
-
-
-  
-  <h2 id="1-时间复杂度"><a href="#1-时间复杂度" class="headerlink" title="1 时间复杂度"></a>1 时间复杂度</h2><p>二分查找的思想很简单，前提是数组是有序的，查找的时间复杂度是$O(logn)$。利用三个指针，分别指向数组的头部、中间和尾部，如果待查找的元素$target$在数组的前半部分，则跳转到前半部分查找，如果在后半部分，则跳转到后半部分进行查找，当头部的值大于尾部指针的值时，则表示查不到。</p>
-<a id="more"></a>
-
-
-
-<h2 id="2-关键代码"><a href="#2-关键代码" class="headerlink" title="2 关键代码"></a>2 关键代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">binarySearch</span><span class="params">(<span class="keyword">int</span> []nums, <span class="keyword">int</span>  target)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> l = <span class="number">0</span>, r = nums.length-<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(l&lt;=r)&#123;</span><br><span class="line">        <span class="keyword">int</span> mid = l + (r-l)/<span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span>(nums[mid] == target)</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(nums[mid] &lt; target)<span class="comment">//到后半部分查找</span></span><br><span class="line">            l = mid + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            r = mid - <span class="number">1</span>;<span class="comment">//到前半部分查找  如果第3行中用的是while(l&lt;r)，则此行应该写成开区间，即r=mid;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-  
-  
-    
-    <div class='footer'>
       
-      
-        
-      
-      
-        <div class='copyright'>
-          <blockquote>
-            
-              
-                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
-
-              
-            
-              
-                <p>本文永久链接是：<a href=http://jums.club/binary-search/>http://jums.club/binary-search/</a></p>
-              
-            
-          </blockquote>
+        <div>
+          <a class='readmore' href='/leetcode/house-robber/'>
+            Read More
+          </a>
         </div>
       
-      
-        <div class='donate'>
-          <div class='imgs'>
-            
-              <img src='https://jums.club/images/wechatpay.jpg'>
-            
-              <img src='https://jums.club/images/alipay.jpg'>
-            
+    </div>
+  
+
+</div>
+
           </div>
-        </div>
+        
       
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+    <div class='headimg-div'>
+      <a class='headimg-a' href="/leetcode/sort-array-by-parity-ii/">
+        <img class='headimg' src='https://jums.club/leetcode/images/LeetCode_Sharing.png'/>
+      </a>
     </div>
   
   
     
-
-
-  <div class='article-meta' id="bottom">
-    <div class='new-meta-box'>
-      
+    <h2 class="article-title" >
+      <a href="/leetcode/sort-array-by-parity-ii/">
+        922. 按奇偶排序数组 II
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <div class="tag link"><a class="link-card" title="922. 按奇偶排序数组 II，https://leetcode-cn.com/problems/sort-array-by-parity-ii/" href="https://jums.club/leetcode/images/safari.png"><div class="left"><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/256/safari.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/256/safari.png" srcset="data:image/png;base64,666"/></div><div class="right"><p class="text">922. 按奇偶排序数组 II，https://leetcode-cn.com/problems/sort-array-by-parity-ii/</p><p class="url">https://jums.club/leetcode/images/safari.png</p></div></a></div>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-11-10T18:52:51+08:00">
-  <a class='notlink'>
-    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Nov 10, 2020</p>
-  </a>
+          
+          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/crazyjums'><img src='https://jums.club/leetcode/images/head.jpg'></a>
+        
+        <time>2020-11-12</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/leetcode/categories/LeetCode%E5%88%B7%E9%A2%98/">LeetCode刷题</a><span class="sep"></span><a class="category-link" href="/leetcode/categories/LeetCode%E5%88%B7%E9%A2%98/simple/">simple</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/leetcode/sort-array-by-parity-ii/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
 </div>
 
-        
-      
-        
-          
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/leetcode/tags/%E7%AE%97%E6%B3%95/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>算法</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/leetcode/tags/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>搜索算法</p></a></div>
-
-
-        
-      
-        
-          
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://jums.club/binary-search/&title=二分搜索 - Crazyjums Leetcode&summary=1 时间复杂度二分查找的思想很简单，前提是数组是有序的，查找的时间复杂度是$O(logn)$。利用三个指针，分别指向数组的头部、中间和尾部，如果待查找的元素$target$在数组的前半部分，则跳转到前半部分查找，如果在后半部分，则跳转到后半部分进行查找，当头部的值大于尾部指针的值时，则表示查不到。"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,666">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://jums.club/binary-search/&title=二分搜索 - Crazyjums Leetcode&summary=1 时间复杂度二分查找的思想很简单，前提是数组是有序的，查找的时间复杂度是$O(logn)$。利用三个指针，分别指向数组的头部、中间和尾部，如果待查找的元素$target$在数组的前半部分，则跳转到前半部分查找，如果在后半部分，则跳转到后半部分进行查找，当头部的值大于尾部指针的值时，则表示查不到。"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,666">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://jums.club/binary-search/&title=二分搜索 - Crazyjums Leetcode&summary=1 时间复杂度二分查找的思想很简单，前提是数组是有序的，查找的时间复杂度是$O(logn)$。利用三个指针，分别指向数组的头部、中间和尾部，如果待查找的元素$target$在数组的前半部分，则跳转到前半部分查找，如果在后半部分，则跳转到后半部分进行查找，当头部的值大于尾部指针的值时，则表示查不到。"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,666">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" srcset="data:image/png;base64,666"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAD4CAAAAADkunTXAAACSUlEQVR42u3cS27DMAwFQN//0ukBgkDix2lMjXaOC1vDbl5IIdfr0HWBg4ODg4MPgl/J9fbAD59n7396X3W/4ODg4ODgE+HbAWAB371/VwGXBQUHBwcHBx8MXwaAxfVdgaZtv+Dg4ODg4ODlhkFXocHBwcHBwcH7A0y1QZEtPDg4ODg4+MnwcIN+AcsWJFvor01SwMHBwcHBfwiePjD3T9dtB/zAwcHBwcEfDK+u6oA/GkjK+wUHBwcHBx8EzwaEbAF2g1D0OduNDXBwcHBw8EHw3WARHchXBwTZRsP2QAEcHBwcHHwAPBpMohuPFjYbkNKNCHBwcHBw8EHwaqOga6CQLdDyveDg4ODg4AfAs4OBbOO/Wuj0JAUcHBwcHPzB8LuCSPZAQXfBticp4ODg4ODgD4ZXv+B3NSCihYnuDxwcHBwcfBI8epAvGjS6Gg7ZAwjg4ODg4OCT4dFGffcgIVuQtuQGDg4ODg7+YPjuC6MBJrvR3QCUDkzg4ODg4OCD4VFY9nr3eV3BChwcHBwc/AR49EHdDf+774ODg4ODg58AXwWGV/PqGlAs74ODg4ODgw+Cd29494Bgd1DZLgw4ODg4OPgg+JVc0cJUV1fjBBwcHBwcfCL8rsASDTBhSHTwAQ4ODg4OPhjeFSC6Dgp8fZICDg4ODg5+ILwtYNzU+AAHBwcHBweP/9BdVwMjG2C+1ogABwcHBwf/AXh0oBC9n/276j8IHBwcHBx8MrwaGLIDg2xDIzrIAAcHBwcHnwg/bYGDg4ODgw9Yf56FAGqb8GPgAAAAAElFTkSuQmCC">
           </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://jums.club/binary-search/&text=二分搜索 - Crazyjums Leetcode"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" srcset="data:image/png;base64,666">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
-
         
       
-    </div>
-  </div>
-
-
-  
-  
-
-  
-    <div class="prev-next">
-      
-        <a class='prev' href='/leetcode/next-permutation/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>下一个全排列</p>
-          <p class='content'>
-
-31. 下一个排列https://leetcode-cn.com/problems/next-permutation/
-
-
-实现获取下一个排列的函数，算法需要将给定数字序列重新排列成字典序中...</p>
-        </a>
-      
-      
-    </div>
-  
-</article>
-
-
-  
-
-  <article class="post white-box reveal shadow" id="comments">
-    <p ct><i class='fas fa-comments'></i> 评论</p>
     
-    <div id="valine_container" class="valine_thread">
-  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
-</div>
-
-  </article>
-
+  </section>
+  
+    
+  
 
 
-
-
-  <script>
-  // https://github.com/theme-next/hexo-theme-next/blob/master/layout/_third-party/math/mathjax.swig
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.0/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    // 文章章节标题不能为 “MathJax” ，否则会报错。
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
-
-
-
+    
+  
 </div>
 <aside class='l_side'>
   
@@ -709,28 +523,161 @@
     
     
 
+<section class="widget blogger shadow desktop mobile">
+  <div class='content'>
+    
+      
+        <a class='avatar flat-box rectangle' href='/leetcode/about/'>
+          <img no-lazy src='https://jums.club/leetcode/images/head.jpg'/>
+        </a>
+      
+    
+    
+      <div class='text'>
+        
+        
+        
+          <p><span id="jinrishici-sentence">Crazyjums Leetcode</span></p>
+          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+        
+      </div>
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="/leetcode/atom.xml"
+              class="social fas fa-rss flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="mailto:me@xxx.com"
+              class="social fas fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="https://github.com/crazyjums/"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="https://music.163.com/#/user/home?id=55006914"
+              class="social fas fa-headphones-alt flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+      </div>
+    
+  </div>
+</section>
 
+  
 
-  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+  
+    
+    
+  
+
+  <section class="widget category shadow desktop">
     
   <header>
     
-      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
     
   </header>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-text">1 时间复杂度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%85%B3%E9%94%AE%E4%BB%A3%E7%A0%81"><span class="toc-text">2 关键代码</span></a></li></ol>
+      <ul class="entry navigation">
+        
+          <li><a class="flat-box"
+            title="/leetcode/categories/LeetCode%E5%88%B7%E9%A2%98/" href="/leetcode/categories/LeetCode%E5%88%B7%E9%A2%98/"
+            id="leetcodecategoriesLeetCodeE588B7E9A298"
+            ><div class='name'>LeetCode刷题</div><div class='badge'>(5)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/leetcode/categories/LeetCode%E5%88%B7%E9%A2%98/hard/" href="/leetcode/categories/LeetCode%E5%88%B7%E9%A2%98/hard/"
+            id="leetcodecategoriesLeetCodeE588B7E9A298hard"
+            ><div class='name'>hard</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/leetcode/categories/LeetCode%E5%88%B7%E9%A2%98/hard/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" href="/leetcode/categories/LeetCode%E5%88%B7%E9%A2%98/hard/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"
+            id="leetcodecategoriesLeetCodeE588B7E9A298hardE58AA8E68081E8A784E58892"
+            ><div class='name'>动态规划</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/leetcode/categories/LeetCode%E5%88%B7%E9%A2%98/middle/" href="/leetcode/categories/LeetCode%E5%88%B7%E9%A2%98/middle/"
+            id="leetcodecategoriesLeetCodeE588B7E9A298middle"
+            ><div class='name'>middle</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/leetcode/categories/LeetCode%E5%88%B7%E9%A2%98/middle/%E5%8F%8C%E6%8C%87%E9%92%88/" href="/leetcode/categories/LeetCode%E5%88%B7%E9%A2%98/middle/%E5%8F%8C%E6%8C%87%E9%92%88/"
+            id="leetcodecategoriesLeetCodeE588B7E9A298middleE58F8CE68C87E99288"
+            ><div class='name'>双指针</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/leetcode/categories/LeetCode%E5%88%B7%E9%A2%98/simple/" href="/leetcode/categories/LeetCode%E5%88%B7%E9%A2%98/simple/"
+            id="leetcodecategoriesLeetCodeE588B7E9A298simple"
+            ><div class='name'>simple</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/leetcode/categories/%E7%AE%97%E6%B3%95/" href="/leetcode/categories/%E7%AE%97%E6%B3%95/"
+            id="leetcodecategoriesE7AE97E6B395"
+            ><div class='name'>算法</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/leetcode/categories/%E7%AE%97%E6%B3%95/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/" href="/leetcode/categories/%E7%AE%97%E6%B3%95/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/"
+            id="leetcodecategoriesE7AE97E6B395E6909CE7B4A2E7AE97E6B395"
+            ><div class='name'>搜索算法</div><div class='badge'>(1)</div></a></li>
+        
+      </ul>
     </div>
   </section>
 
 
   
 
+  
+    
+    
+  
+
+  <section class="widget tagcloud shadow desktop mobile">
+    
+  <header>
+    
+      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <a href="/leetcode/tags/LeetCode%E5%88%B7%E9%A2%98/" style="font-size: 24px; color: #555">LeetCode刷题</a> <a href="/leetcode/tags/hard/" style="font-size: 14px; color: #999">hard</a> <a href="/leetcode/tags/middle/" style="font-size: 19px; color: #777">middle</a> <a href="/leetcode/tags/simple/" style="font-size: 19px; color: #777">simple</a> <a href="/leetcode/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" style="font-size: 19px; color: #777">动态规划</a> <a href="/leetcode/tags/%E5%8F%8C%E6%8C%87%E9%92%88/" style="font-size: 14px; color: #999">双指针</a> <a href="/leetcode/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" style="font-size: 14px; color: #999">排序算法</a> <a href="/leetcode/tags/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/" style="font-size: 14px; color: #999">搜索算法</a> <a href="/leetcode/tags/%E7%AE%97%E6%B3%95/" style="font-size: 14px; color: #999">算法</a>
+    </div>
+  </section>
+
+
+  
+
+  
+
 
 </aside>
-
 
 
         
@@ -740,8 +687,8 @@
 
 <script>
   window.pdata={}
-  pdata.ispage=true;
-  pdata.postTitle="二分搜索";
+  pdata.ispage=false;
+  pdata.postTitle="";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 
